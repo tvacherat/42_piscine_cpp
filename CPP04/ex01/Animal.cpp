@@ -43,7 +43,7 @@ Animal::~Animal()
 
 Animal &				Animal::operator=( Animal const & rhs )
 {
-	if ( this == &rhs )
+	if ( this != &rhs )
 		this->m_type = rhs.getType();
 	return *this;
 }
