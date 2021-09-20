@@ -24,12 +24,15 @@ Bureaucrat::Bureaucrat( const Bureaucrat & src ): m_name(src.m_name), m_grade(sr
 {
 }
 
-Bureaucrat::Bureaucrat(std::string const name, size_t grade): m_name(name), m_grade(grade)
+Bureaucrat::Bureaucrat(std::string const name, size_t grade): m_name(name)
 {
 	if (m_grade > GRADE_MIN)
+		throw Bureaucrat::GradeTooLowException();
 		m_grade = GRADE_MIN;
 	else if (m_grade < GRADE_MAX)
-		m_grade = GRADE_MAX;
+		throw Bureaucrat::GradeTooHighException();
+	else
+		m_grade = grade;
 }
 
 /*
