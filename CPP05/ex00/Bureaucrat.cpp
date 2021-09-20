@@ -28,7 +28,6 @@ Bureaucrat::Bureaucrat(std::string const name, size_t grade): m_name(name)
 {
 	if (m_grade > GRADE_MIN)
 		throw Bureaucrat::GradeTooLowException();
-		m_grade = GRADE_MIN;
 	else if (m_grade < GRADE_MAX)
 		throw Bureaucrat::GradeTooHighException();
 	else
