@@ -6,7 +6,7 @@
 /*   By: tvachera <tvachera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 16:39:40 by tvachera          #+#    #+#             */
-/*   Updated: 2021/07/26 16:48:49 by tvachera         ###   ########.fr       */
+/*   Updated: 2021/09/22 10:24:52 by tvachera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main(void)
 {
 	Bureaucrat	boss("boss", GRADE_MAX);
 	Bureaucrat	new_guy("new", GRADE_MIN);
-
+	
 	try
 	{
 		boss.incGrade();

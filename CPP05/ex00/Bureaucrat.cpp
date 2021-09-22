@@ -6,7 +6,7 @@
 /*   By: tvachera <tvachera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 16:57:49 by tvachera          #+#    #+#             */
-/*   Updated: 2021/07/31 21:46:52 by tvachera         ###   ########.fr       */
+/*   Updated: 2021/09/22 10:24:19 by tvachera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ Bureaucrat::Bureaucrat( const Bureaucrat & src ): m_name(src.m_name), m_grade(sr
 
 Bureaucrat::Bureaucrat(std::string const name, size_t grade): m_name(name)
 {
-	if (m_grade > GRADE_MIN)
+	if (grade > GRADE_MIN)
 		throw Bureaucrat::GradeTooLowException();
-	else if (m_grade < GRADE_MAX)
+	else if (grade < GRADE_MAX)
 		throw Bureaucrat::GradeTooHighException();
 	else
 		m_grade = grade;
